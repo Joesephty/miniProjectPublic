@@ -1,0 +1,196 @@
+main>div {
+    color: #614C71;
+    text-align: center;
+    width: 81.25em;
+    /* 1300px / 16 */
+    margin-top: 2.5em;
+    /* 40px / 16 */
+    margin-bottom: 2.5em;
+    /* 40px / 16 */
+    border: 0.1875em solid #614C71;
+    /* 3px / 16 */
+}
+
+main>div>div {
+    font-size: 1em;
+    margin-bottom: 2.5em;
+    /* 40px / 16 */
+    text-align: center;
+}
+
+main>div>i {
+    font-size: 3.75em;
+    /* 60px / 16 */
+    margin-top: 0.8em;
+    /* 40px / 16 */
+}
+
+.bankimg {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    border: 0.125em solid #614C71;
+    /* 2px / 16 */
+    height: 12.5em;
+    /* 200px / 16 */
+    width: 62.5em;
+    /* 1000px / 16 */
+}
+
+.bankimg>img {
+    height: 12.5em;
+    /* 200px / 16 */
+    width: 12.5em;
+    /* 200px / 16 */
+    margin-right: 12.5em;
+    /* 200px / 16 */
+}
+
+.bankimg>div {
+    font-size: 2em;
+    margin-left: -4.75em;
+    
+}
+
+.buy-comfirm {
+    display: block;
+    width: 9.375em;
+    /* 150px / 16 */
+    text-align: center;
+    padding: 0.625em;
+    /* 10px / 16 */
+    border-radius: 0.3125em;
+    /* 5px / 16 */
+    transition: 0.3s ease-in-out;
+    background-color: #614C71;
+    color: #F7EED9;
+    text-decoration: none;
+    border: 0.125em solid #614C71;
+    /* 2px / 16 */
+    margin-bottom: 2.5em;
+    /* 40px / 16 */
+}
+
+.buy-comfirm:hover {
+    background-color: #F7EED9;
+    color: #614C71;
+}
+
+.check-bill {
+    border: 0.125em solid #614C71;
+    border-radius: 8px;
+    width: 40em;
+    text-align: left;
+    margin-top: 45px;
+    align-items: center;
+    justify-content: center;
+}
+
+.bill, .method, .locate {
+    font-size: 1em;
+    border-bottom: 0.125em solid #614C71;
+}
+
+.bill {
+    margin-top: 10px;
+    width: 36em;
+}
+
+.method {
+    width: 36em;
+    margin-top: 10px;
+}
+
+.check-box {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 40px;
+    width: 18px;
+    height: 18px;
+}
+
+.check-box>input {
+    color: #614C71;
+}
+
+.locate {
+    height: 50px;
+    width: 36em;
+    margin-top: 10px;
+    border-top: 0.125em solid #614C71;
+    
+}
+
+.bill-pri {
+    margin-bottom: 10px;
+    width: 36em;
+    margin-top: 10px;
+}
+ 
+
+
+
+/* main>div {
+    color: #614C71;
+    text-align: center;
+    width: 1300px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 3px solid #614C71;
+}
+
+main>div>div {
+    font-size: 1em;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+main>div>i {
+    font-size: 60px;
+    margin-top: 40px;
+}
+
+.bankimg {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    border: 2px solid #614C71;
+    height: 200px;
+    width: 1000px;
+}
+
+.bankimg>img {
+    height: 200px;
+    width: 200px;
+    margin-right: 200px;
+}
+
+.bankimg>div {
+    font-size: 2em;
+    margin-left: -140px;
+}
+
+.buy-comfirm {
+    display: block;
+        width: 150px;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+        transition: .3s ease-in-out;
+        background-color: #614C71;
+        color: #F7EED9;
+        text-decoration: none;
+        border: 2px solid #614C71;
+        margin-bottom: 40px;
+}
+
+.buy-comfirm:hover {
+    background-color: #F7EED9;
+    color: #614C71;
+}
+ */

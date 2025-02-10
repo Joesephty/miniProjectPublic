@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>달보드레</title>
+
+    <!-- font awesome link : https://fontawesome.com/search -->
+    <!-- 여기서 classic/solid 의 icon만 이용합시다. -->
+    <script src="https://kit.fontawesome.com/bc52c2057e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/banking.css">
+    <link rel="icon" href="../asset/icon.svg"> <!-- Browser Tab단의 icon link -->
+    <script src="../JS/banking.js" defer></script>
+    <script src="../JS/auth.js" defer></script>
+</head>
+
+<body class="bgClr1">
+    <div class="containerDetail">
+        <!-- header 는 나중에 완성되면 알려드리겠습니다. ㅠㅠ -->
+
+
+        <!-- 본인 page에 맞게 grid 를 분할하여 작업해주세요.-->
+        <header class="header">
+
+            <!-- logo -->
+            <div class="logo">
+                <a href="../index.html">
+                    <h2>달보드레</h2>
+                </a>
+            </div>
+
+            <!-- nav -->
+            <div class="nav">
+                <ul>
+                    <!-- 지역별 -->
+                    <li class="horiList">
+                        <a href="./product/region.html" class="navlink">지역별</a>
+                    </li>
+                    <!-- 막걸리 -->
+                    <li class="horiList">
+                        <a href="./product/makgulli.html" class="navlink">막걸리</a>
+                    </li>
+                    <!--증류주  -->
+                    <li class="horiList">
+                        <a href="./product/liquor.html" class="navlink">증류주</a>
+                    </li>
+                    <li class="horiList">
+                        <a href="./product/qna.html" class="navlink">커뮤니티</a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <!-- search bar -->
+            <div class="srchBar">
+                <input placeholder="토끼소주" type="search" class="input">
+                <i class="fa-solid fa-magnifying-glass icon Clr6"></i>
+            </div>
+
+
+            <!-- signin  -->
+            <div class="signIn">
+
+            </div>
+
+            <!-- narrow width nav -->
+            <div class="menuIcon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+
+        <main>
+
+            <div>
+                <i class="fa-solid fa-sack-dollar"></i>
+
+                <div>
+                    <h2>무통장입금 안내</h2>
+                </div>
+
+                <div>무통장입금 주문시 주문자명 또는 상호명이 실제 주문자의 성함과
+                    <br>다를경우 입금 확인이 어렵습니다.
+                </div>
+
+                <div>아래 통장으로 입금해주시면 결제가 완료됩니다.</div>
+
+                <div class="bankimg"><img src="../asset/logo_font2.svg" alt="달보드레">
+                    <div>농협 000- 0000- 00000000 (달보드레)</div>
+                </div>
+
+                <div class="check-bill">
+                    <div class="bill">
+                        <h2>영수증</h2>
+                    </div>
+
+                    <div class="method">
+                        <h2>구매 방법</h2>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" class="check-box" checked disabled> 무통장 입금
+                    </div>
+
+                    <div class="locate">
+                        <h2>배송지</h2>
+                        <div>
+
+                        </div>
+                    </div>
+
+                    <div class="bill-pri">
+                        <h2>금액</h2>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div>이용해주셔서 감사합니다.</div>
+                <a href="../index.html" class="buy-comfirm">확인</a>
+            </div>
+            <div class="orderReceipt">
+
+            </div>
+        </main>
+
+        <footer class="footer">
+
+            <!-- userofterm 이용약관 -->
+            <div class="userTerm Clr6">
+                <ul>
+                    <li class="horiList"><a href="#" class="userTermTxt">이용약관</a></li>
+                    <li class="horiList"><a href="#" class="userTermTxt">개인정보처리방침</a></li>
+                    <li class="horiList"><a href="#" class="userTermTxt">고객의 소리</a></li>
+                </ul>
+            </div>
+
+            <div class="bizTel Clr6">
+                <h2><i class="fa-solid fa-phone-volume"> 고객센터</i></h2>
+                <a href="tel0326131696" class="Clr6">032-613-1696</a>
+                <p>평일 10:00 - 18:00</p>
+            </div>
+
+
+            <!-- bizinfo 사업자정보 -->
+            <div class="bizInfo">
+                <p class="infoTxt Clr6"><strong>대표</strong> : 김지수, 서인덕, 한믿음, 주형진, 박수빈, 윤시우</p>
+                <p class="infoTxt Clr6"><strong>주소</strong> : 경기도 부천시 부천로29번길 7 (심곡동)</p>
+                <p class="infoTxt Clr6"><strong>사업자등록번호</strong> : 000 - 00 - 000 &nbsp; &nbsp;<a
+                        href="../otherpage/bizcertify.html" class="bgClr6">사업자 확인</a></p>
+                <p class="infoTxt Clr6"><strong>통신판매 신고번호</strong> : 2025-경기부천-0000</p>
+            </div>
+
+            <!-- footer logo 사업자명 -->
+            <div class="bizName Clr6">
+                <h2>주식회사 달보드레</h2>
+                <img src="../asset/logo_font2.svg" alt="달보드레">
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

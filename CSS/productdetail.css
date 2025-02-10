@@ -1,0 +1,130 @@
+.containerDetail {
+    height: 90vh;
+}
+
+.detail {
+    width: 90vw;
+    max-width: 1903px;
+    height: 65vh;
+    flex-flow: column nowrap;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    scroll-snap-type: y mandatory;
+}
+
+.bottle {
+    z-index: -1;
+
+}
+
+.section {
+    flex: none;
+    width: 80vw;
+    height: 65vh;
+    align-content: center;
+    scroll-snap-align: center;
+    padding: 0 5em 0 5em;
+}
+
+.title {
+    font-size: 4em;
+    font-weight: 900;
+}
+
+.point {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.detailBody {
+    font-size: 1.5em;
+    font-weight: 300;
+
+}
+
+.Clr_org {
+    color: orange;
+}
+
+
+
+.order {
+    height: 50vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 0.5fr 0.5fr;
+    border-top: 0.5em solid #614C71;
+    border-bottom: 0.5em solid #614C71;
+    padding: 1em 0 1em 0;
+    align-items: center;
+}
+
+
+
+.infoImg {
+    grid-area: 1 / 1 / 4 / 2;
+    display: grid;
+    grid-template-rows: 2;
+}
+
+.infoImg img {
+    border-radius: 1em;
+    width: 50%;
+}
+
+.productInfo {
+    grid-area: 1/2/2/3;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.productInfo div:first-child {
+    color: #614C71;
+    font-size: 2em;
+    font-weight: 900;
+    text-align: left;
+}
+
+.productInfo div:nth-child(2) {
+
+    color: gray;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.productInfo div:last-child,
+.productInfo div:last-child strong {
+    color: red;
+}
+
+.productInfo div:last-child {
+
+    font-size: 2em;
+}
+
+.productInfo div:last-child strong {
+    font-size: 1.3em;
+}
+
+.orderBtn,
+.quantity {
+
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.quantity {
+    grid-area: 2/2/3/3;
+}
+
+.orderBtn {
+    grid-area: 3/2/4/3;
+}
+
+
+.meter {
+    font-size: 1.3em;
+
+}

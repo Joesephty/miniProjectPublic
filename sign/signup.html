@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>달보드레 - 회원가입</title>
+
+    <!-- CSS 파일 -->
+    <link rel="stylesheet" href="../CSS/sign.css">
+    <link rel="stylesheet" href="../CSS/index.css">
+
+    <!-- 파비콘 -->
+    <link rel="icon" href="../asset/icon.svg">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/bc52c2057e.js" crossorigin="anonymous"></script>
+
+    <!-- JS 파일 -->
+    <script src="../JS/signup.js" defer></script>
+    <!-- AXIOS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body class="bgClr1">
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <a href="../index.html">
+                    <h2>달보드레</h2>
+                </a>
+            </div>
+        </header>
+
+        <main class="container">
+            <div class="signContainer bgClr6">
+                <h1 class="signContainerTitle Clr1">회원가입</h1>
+                <form name="userSignForm" class="signForm" id="signForm">
+                    <div class="signFormGroup">
+                        <label for="name" class="signFormLabel Clr1">이름</label>
+                        <input type="text" id="name" name="name" class="signFormInput bgClr1" placeholder="이름을 입력하세요"
+                            required>
+                    </div>
+
+                    <div class="signFormGroup">
+                        <label for="email" class="signFormLabel Clr1">이메일</label>
+                        <input type="email" id="email" name="email" class="signFormInput bgClr1"
+                            placeholder="이메일을 입력하세요" required>
+                    </div>
+
+                    <div class="signFormGroup">
+                        <label for="password" class="signFormLabel Clr1">비밀번호</label>
+                        <input type="password" maxlength="21" minlength="7" id="password" name="password"
+                            class="signFormInput bgClr1" placeholder="비밀번호 (7~21자)" required>
+                        <div id="passwordError" class="errorMessage">비밀번호는 숫자, 문자, 특수문자를 포함해야 합니다.</div>
+                    </div>
+
+                    <div class="signFormGroup">
+                        <label for="confirmPassword" class="signFormLabel Clr1">비밀번호 확인</label>
+                        <input type="password" maxlength="21" minlength="7" id="confirmPassword" name="confirmPassword"
+                            class="signFormInput bgClr1" placeholder="비밀번호를 다시 입력하세요" required>
+                        <div id="confirmPasswordError" class="errorMessage">비밀번호가 일치하지 않습니다.</div>
+                    </div>
+
+                    <div class="signFormGroup">
+                        <label for="phone" class="signFormLabel Clr1">핸드폰 번호</label>
+                        <input type="tel" id="phone" name="phone" class="signFormInput bgClr1"
+                            placeholder="'-' 없이 숫자만 입력하세요" pattern="[0-9]{10,11}" required>
+                        <div id="phoneError" class="errorMessage">핸드폰 번호는 11자리여야 합니다!</div>
+                    </div>
+
+                    <button type="button" name="submitBtn" class="btnSign">가입하기</button>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

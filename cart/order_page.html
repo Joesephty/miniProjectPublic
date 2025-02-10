@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>달보드레</title>
+
+    <!-- font awesome link : https://fontawesome.com/search -->
+    <script src="https://kit.fontawesome.com/bc52c2057e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../CSS/order_page.css">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../JS/auth.js" defer></script>
+    <script src="../JS/order_page.js" defer></script>
+    <link rel="icon" href="../asset/icon.svg"> <!-- Browser Tab단의 icon link -->
+
+</head>
+
+<body class="bgClr1">
+    <div class="container">
+        <!-- header 는 나중에 완성되면 알려드리겠습니다. ㅠㅠ -->
+        <header class="header">
+
+            <!-- logo -->
+            <div class="logo">
+                <a href="#">
+                    <h2>달보드레</h2>
+                </a>
+            </div>
+
+            <!-- nav -->
+            <div class="nav">
+                <ul>
+                    <!-- 지역별 -->
+                    <li class="horiList">
+                        <a href="../product/region.html" class="navlink">지역별</a>
+                    </li>
+                    <!-- 막걸리 -->
+                    <li class="horiList">
+                        <a href="../product/makgulli.html" class="navlink">막걸리</a>
+                    </li>
+                    <!--증류주  -->
+                    <li class="horiList">
+                        <a href="../product/liquor.html" class="navlink">증류주</a>
+                    </li>
+                    <li class="horiList">
+                        <a href="../product/liquor.html" class="navlink">커뮤니티</a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <!-- search bar -->
+            <div class="srchBar">
+                <i class="fa-solid fa-magnifying-glass icon Clr6"></i>
+                <input placeholder="토끼소주" type="search" class="input">
+            </div>
+
+
+            <!-- signin  -->
+            <div class="signIn">
+
+            </div>
+
+            <!-- narrow width nav -->
+            <div class="menuIcon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+        </header>
+
+        <main class="pagesz">
+            <form name="userOrderForm" class="inputstyle">
+                <h1>배송지</h1>
+
+                <label>주문자명
+                    <input name="clientName" type="text" id="clientName" required>
+                </label>
+
+                <label>연락처
+                    <input name="phone" type="text" id="phone" required>
+                </label>
+
+                <label>주소
+                    <input name="address" type="text" id="address" required>
+                </label>
+
+                <label>배송메모
+                    <input name="memo" type="text" id="memo" placeholder="배송메모를 적어주세요.">
+                </label>
+
+                <h1>구매하기</h1>
+
+                <div class="totalPrice grid-container">
+
+                </div>
+
+                <!-- <a href="../index.html#section">오늘의 상품 추천 보기</a> -->
+
+
+                <div class="button-top">
+                    <button type="button" name="submitBtn" class="buttonstlye">결제</button>
+                </div>
+            </form>
+        </main>
+
+
+        <footer class="footer">
+
+            <!-- userofterm 이용약관 -->
+            <div class="userTerm Clr6">
+                <ul>
+                    <li class="horiList"><a href="#" class="userTermTxt">이용약관</a></li>
+                    <li class="horiList"><a href="#" class="userTermTxt">개인정보처리방침</a></li>
+                    <li class="horiList"><a href="#" class="userTermTxt">고객의 소리</a></li>
+                </ul>
+            </div>
+
+            <div class="bizTel Clr6">
+                <h2><i class="fa-solid fa-phone-volume"> 고객센터</i></h2>
+                <a href="tel0326131696" class="Clr6">032-613-1696</a>
+                <p>평일 10:00 - 18:00</p>
+            </div>
+
+
+            <!-- bizinfo 사업자정보 -->
+            <div class="bizInfo">
+                <p class="infoTxt Clr6"><strong>대표</strong> : 김지수, 서인덕, 한믿음, 주형진, 박수빈, 윤시우</p>
+                <p class="infoTxt Clr6"><strong>주소</strong> : 경기도 부천시 부천로29번길 7 (심곡동)</p>
+                <p class="infoTxt Clr6"><strong>사업자등록번호</strong> : 000 - 00 - 000 &nbsp; &nbsp;<a
+                        href="../otherpage/bizcertify.html" class="bgClr6">사업자 확인</a></p>
+                <p class="infoTxt Clr6"><strong>통신판매 신고번호</strong> : 2025-경기부천-0000</p>
+            </div>
+
+            <!-- footer logo 사업자명 -->
+            <div class="bizName Clr6">
+                <h2>주식회사 달보드레</h2>
+                <img src="../asset/logo_font2.svg" alt="달보드레">
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>

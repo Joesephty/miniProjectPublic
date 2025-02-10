@@ -1,0 +1,76 @@
+/*newproduct.html 시작*/
+* {
+    margin: 0 auto;
+
+}
+
+
+.bgClr1 {
+    margin: 5% auto 0;
+    background-color: #F7EED9;
+
+}
+
+h1 {
+    text-align: center;
+}
+.product__table {
+    display: grid;
+    width: 90vw;
+    max-width: 1903px;
+    grid-template-rows: repeat(auto-fit, 3, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, 2, minmax(300px, 1fr));
+    row-gap: 1em;
+}
+
+
+.disnone {
+    visibility: hidden;
+}
+
+.category {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 5px auto;
+    justify-content: baseline;
+}
+.radio {
+    grid-template-columns: 1fr 1fr;
+}
+
+.lead label {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+button {
+    padding: 8px 15px;
+    margin: 0 auto;
+    background: #9F6496;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 30%;
+}
+
+
+
+/*
+
+.category {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    margin: 5px;
+}
+
+.lead label {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: space-between;
+    margin: 5px;
+}
+    
+*/

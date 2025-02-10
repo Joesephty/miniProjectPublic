@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>달보드레</title>
+
+    <!-- font awesome link : https://fontawesome.com/search -->
+    <!-- 여기서 classic/solid 의 icon만 이용합시다. -->
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/productdetail.css">
+    <script src="https://kit.fontawesome.com/bc52c2057e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../JS/productdetail.js" defer></script>
+    <script src="../JS/auth.js" defer></script>
+    <link rel="icon" href="../asset/icon.svg"> <!-- Browser Tab단의 icon link -->
+</head>
+
+<body class="bgClr1">
+    <div class="containerDetail">
+        <!-- 본인 page에 맞게 grid 를 분할하여 작업해주세요.-->
+        <header class="header">
+
+            <!-- logo -->
+            <div class="logo">
+                <a href="../index.html">
+                    <h2>달보드레</h2>
+                </a>
+            </div>
+            <!-- nav -->
+            <div class="nav">
+                <ul>
+                    <!-- 지역별 -->
+                    <li class="horiList">
+                        <a href="./product/region.html" class="navlink">지역별</a>
+                    </li>
+                    <!-- 막걸리 -->
+                    <li class="horiList">
+                        <a href="./product/makgulli.html" class="navlink">막걸리</a>
+                    </li>
+                    <!--증류주  -->
+                    <li class="horiList">
+                        <a href="./product/liquor.html" class="navlink">증류주</a>
+                    </li>
+                    <li class="horiList">
+                        <a href="./product/qna.html" class="navlink">커뮤니티</a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <!-- search bar -->
+            <div class="srchBar">
+                <input placeholder="토끼소주" type="search" class="input">
+                <i class="fa-solid fa-magnifying-glass icon Clr6"></i>
+            </div>
+
+
+            <!-- signin  -->
+            <div class="signIn">
+                
+            </div>
+
+            <!-- narrow width nav -->
+            <div class="menuIcon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+
+
+
+        <main class="detail">
+            <div class="bottle">
+                <img src="../asset/AdobeStock_605973974.png" alt="토끼소주">
+            </div>
+
+            <div class="section">
+                <div class="title Clr6">미국인이 만든 한국소주</div>
+                <div class="title Clr6">토끼소주</div>
+            </div>
+
+            <div class="section">
+                <div class="point Clr_org">point 1</div>
+                <div class="title Clr6">미국에서 탄생한<br>최초의 한국전통소주</div>
+                <div class="detailBody Clr6">토끼소주는 한국을 사랑하는 미국사람이 만든 한국전통소주입니다.</div>
+                <div class="detailBody Clr6">미국인 브랜 힐 대표는 한국여행 중 여러 양조장을 여행하며 깊은 영감을 받아 뉴욕 브루클린으로 돌아간 후에도 우라나라 전통주에 대한 연구를 이어갔습니다.</div>
+                <div class="detailBody Clr6">그러던 중 토끼소주가 탄생했으며, 뿌리를 찾아 한국으로 돌아와 술을 만들고 있습니다.</div>
+            </div>
+
+            <div class="section">
+                <div class="point Clr_org right">point2</div>
+                <div class="title Clr6 right">가장 한국적인 방식으로 만듭니다.</div>
+                <div class="detailBody Clr6 right">전통소주는 쌀에서부터 시작했지만 1965년 식량정책으로 인해 희석식 소주가 주류를 이루었습니다.</div>
+                <div class="detailBody Clr6 right">브랜 힐 대표는 가장 한국적인 방식으로 소주를 빚기 시작했습니다.</div>
+                <div class="detailBody Clr6 right">특이한 점은 부드러운 단맛을 위해 멥쌀이 아닌 100% 찹쌀을 사용하며,</div>
+                <div class="detailBody Clr6 right">조선시대때 방식인 찹쌀가루를 내서 범벅으로 덧술을 빚습니다.</div>
+            </div>
+
+            <div class="section">
+                <div class="point Clr_org">point3</div>
+                <div class="title Clr6">부드러운 목넘김에 깔끔한 맛</div>
+                <div class="detailBody Clr6">100% 찹쌀이 선사하는 향기와 달큰함이</div>
+                <div class="detailBody Clr6">부드럽게 목을 타고 넘어갑니다.</div>
+                <div class="detailBody Clr6">목넘김 후 올라오는</div>
+                <div class="detailBody Clr6">고도주 특유의 향과 느낌은</div>
+                <div class="detailBody Clr6">더 깔끔하게 다가옵니다.</div>
+            </div>
+
+            <div class="section">
+                <label class="meter Clr6">향의 강도
+                    <meter min="0" max="5" value="4" class="meter">4</meter>
+                </label>
+                    
+                <label class="meter Clr6">여운
+                    <meter min="0" max="5" value="4" class="meter">4</meter>
+                </label>
+
+                <label class="meter Clr6">바디
+                    <meter min="0" max="5" value="4" class="meter">4</meter>
+                </label>
+            </div>
+
+            <div class="section">
+                <form name="orderlist" id="orderlist" class="order">
+                    <div class="infoImg">
+                        <!-- <img src="${productImg}" alt="${productName}"> -->
+                    </div>
+
+                    <div class="productInfo">
+                        <!-- 
+                        <div class="Value">${productName}</div>
+                        <div class="Value"> ${productPrice}</div>
+                        -->
+                    </div>
+
+                    <label class="quantity">수량 :
+                        <input type="number" name="quantity" id="quantity" min="1" max="100" value="1">
+                    </label>
+                    <label class="orderBtn">
+                        <input type="button" name="submitBtn" value="구매하기" class="btn Clr1">
+                    </label>
+
+                </form>
+            </div>
+            <div id="reviewTbl" class="section">
+                
+            </div>
+
+
+        </main>
+
+
+        <footer class="footer">
+
+            <!-- userofterm 이용약관 -->
+            <div class="userTerm Clr6">
+                <ul>
+                    <li class="horiList"><a href="#" class="userTermTxt">이용약관</a></li>
+                    <li class="horiList"><a href="#" class="userTermTxt">개인정보처리방침</a></li>
+                    <li class="horiList"><a href="#" class="userTermTxt">고객의 소리</a></li>
+                </ul>
+            </div>
+
+            <div class="bizTel Clr6">
+                <h2><i class="fa-solid fa-phone-volume"> 고객센터</i></h2>
+                <a href="tel0326131696" class="Clr6">032-613-1696</a>
+                <p>평일 10:00 - 18:00</p>
+            </div>
+
+
+            <!-- bizinfo 사업자정보 -->
+            <div class="bizInfo">
+                <p class="infoTxt Clr6"><strong>대표</strong> : 김지수, 서인덕, 한믿음, 주형진, 박수빈, 윤시우</p>
+                <p class="infoTxt Clr6"><strong>주소</strong> : 경기도 부천시 부천로29번길 7 (심곡동)</p>
+                <p class="infoTxt Clr6"><strong>사업자등록번호</strong> : 000 - 00 - 000 &nbsp; &nbsp;<a
+                        href="../otherpage/bizcertify.html" class="bgClr6">사업자 확인</a></p>
+                <p class="infoTxt Clr6"><strong>통신판매 신고번호</strong> : 2025-경기부천-0000</p>
+            </div>
+
+            <!-- footer logo 사업자명 -->
+            <div class="bizName Clr6">
+                <h2>주식회사 달보드레</h2>
+                <img src="../asset/logo_font2.svg" alt="달보드레">
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

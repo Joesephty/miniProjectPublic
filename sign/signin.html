@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>달보드레 - 로그인</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/sign.css">
+    <link rel="icon" href="../asset/icon.svg">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/bc52c2057e.js" crossorigin="anonymous"></script>
+    <!-- JS 파일 -->
+    <script src="../JS/signin.js" defer></script>
+
+    <!-- AXIOS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body class="bgClr1">
+
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <a href="../index.html">
+                    <h2>달보드레</h2>
+                </a>
+            </div>
+        </header>
+        <div class="signContainer bgClr6">
+            <h1 class="signContainerTitle Clr1">로그인</h1>
+            <form name="signForm" class="signForm">
+
+                <div class="signFormGroup">
+
+                    <label for="email" class="signFormLabel Clr1">이메일</label>
+                    <input type="email" id="email" name="email" class="signFormInput bgClr1" placeholder="이메일을 입력하세요"
+                        required>
+
+                </div>
+                <div class="signFormGroup">
+
+                    <label for="password" class="signFormLabel Clr1">비밀번호</label>
+                    <input type="password" id="password" name="password" class="signFormInput bgClr1"
+                        placeholder="비밀번호를 입력하세요" required>
+
+                </div>
+                <button type="button" name="submitBtn" class="btnSign">로그인</button>
+                <a href="./userOfTerm.html" class="btnSign">회원가입</a>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

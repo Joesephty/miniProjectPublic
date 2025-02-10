@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/admin_order.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script defer src="../JS/admin_order.js"></script>
+    <link rel="icon" href="../asset/icon.svg">
+    <title>FAQ</title>
+</head>
+
+<body>
+    <header>
+        <div class="header__logo">
+            <a href="../index.html"> <!-- 홈페이지로 이동하는 링크-->
+                <img src="../asset/logo.svg" alt=""><!-- 쇼핑몰 로고  -->
+            </a>
+        </div>
+        <div></div> <!-- 헤더 중앙공백 -->
+        <button class="header__logoutBtn" onclick="location.href='../sign/signin.html'">로그아웃</button>
+        <!-- 관리자 로그아웃 버튼-->
+    </header>
+
+    <div class="admin_workspace"> <!-- 관리자 작업공간 -->
+        <nav><!-- 네비게이션 메뉴 사작-->
+            <ul class="nav_manu">
+                <li class="menu__item ">
+                    <a href="./admin.html">
+                        <p>대시보드</p>
+                    </a>
+                </li>
+                <li class="menu__item ">
+                    <a href="./user_management.html">
+                        <p>사용자 관리</p>
+                    </a>
+                </li>
+                <li class="menu__item ">
+                    <a href="./admin_product_management.html">
+                        <p>상품 관리</p>
+                    </a>
+                </li>
+                <li class="menu__item ">
+                    <a href="./admin_order.html">
+                        <p>거래 내역</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="main__workpage">
+                <div class="">
+                    <table>
+                        <h2>거래 내역</h2>
+                        <div class="search-container">
+                            <input type="text" id="searchInput" placeholder="이름 또는 전화번호 검색">
+                            <button onclick="searchOrder()">검색</button>
+                        </div>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>주문자명</th>
+                                <th>연락처</th>
+                                <th>주소</th>
+                                <th>베송메모</th>
+                                <th>주문상품</th>
+                                <th>상품이름</th>
+                                <th>상품가격</th>
+                                <th>수량</th>
+                                <th>총금액</th>
+                                <th>주문일시</th>
+                                <th>입금확인</th>
+                            </tr>
+                        </thead>
+                        <tbody id="order_list"></tbody>
+                        <div id="modal" class="modal">
+                            <div class="modal-content">
+                                <h2>거래 내역</h2>
+                                <div class="one_input"> 주문일시 :
+                                    <input type="text" id="order-date" readonly>
+                                </div>
+                                <div class="two_input">주문자명:
+                                    <input type="text" id="order-user_name" readonly>
+                                    연락처:
+                                    <input type="text" id="order-phone" readonly>
+                                </div>
+                                <div class="one_input">주소:
+                                    <input type="text" id="order-address" readonly>
+                                </div>
+                                <div class="two_input">주문상품:
+                                    <input type="text" id="order-productId" readonly>
+                                    상품이름:
+                                    <input type="text" id="order-productName" readonly>
+                                </div>
+                                <div class="three_input">상품가격:
+                                    <input type="text" id="product_Price" readonly>
+                                    수량:
+                                    <input type="text" id="quantity" readonly>
+                                    총금액:
+                                    <input type="text" id="order-total" readonly>
+                                </div>
+                                <div class="one_input">배송메모:
+                                    <input type="text" id="memo" readonly>
+                                </div>
+                                <div class="one_input">입금여부 :
+                                    <select id="bankTransfer">
+                                        <option value="0">입금전</option>
+                                        <option value="1">입금됨</option>
+                                    </select>
+                                </div>
+                                <div class="faq_btn">
+                                    <div></div>
+                                    <button id="save-btn">저장</button>
+                                    <button id="close-btn">닫기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </table>
+                    <div id="btns">
+                        <div></div>
+                        <div id="pagination" class="manag_btn"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <aside>
+            <!-- 관리자 정보표시 -->
+            <div class="admin-side">
+                <div class="admin-info">
+                    <img src="https://img.freepik.com/free-vector/illustration-customer-service-concept_53876-5883.jpg?ga=GA1.1.647368945.1737282865&semt=ais_hybrid"
+                        alt="Admin Profile Picture" />
+                    <h3>관리자 이름</h3>
+                    <p>Admin ID: admin001</p>
+                    <p id="log_time"></p>
+                </div>
+
+                <nav class="admin-menu">
+                    <ul>
+                        <li>
+                            <div class="admin-notice">
+                                <span> 관리자 공지사항</span>
+                                <div class="notice-list">
+                                    <!-- 항상 보이는 공지 -->
+                                    <p class="notice">🔔 시스템 점검 예정: 25-01-30</p>
+                                    <p class="notice">📌 신규 업데이트 완료 안내</p>
+
+                                    <!-- 숨겨진 공지 -->
+                                    <div class="hidden-notices">
+                                        <p class="notice">🔒 보안 패치 적용 완료</p>
+                                        <p class="notice">💡 사용자 만족도 조사 예정</p>
+                                        <p class="notice">✔ 서버 점검 완료: 25-01-22</p>
+                                    </div>
+                                </div>
+                                <!-- 더보기 버튼 -->
+                                <button class="toggle-button">더보기</button>
+                            </div>
+                        </li>
+                        <li class="setting">
+                            <img
+                                src="https://cdn-icons-png.freepik.com/256/10895/10895086.png?ga=GA1.1.647368945.1737282865&semt=ais_hybrid">
+                            <span>설정</span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+    </div>
+</body>
+
+</html>

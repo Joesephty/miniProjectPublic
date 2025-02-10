@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/admin_qna_answer.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script defer src="../JS/admin_product_detail.js"></script>
+    <title>FAQ</title>
+</head>
+<body>
+    <header>
+        <div class="header__logo">
+            <a href="../index.html"> <!-- 홈페이지로 이동하는 링크-->
+                <img src="../asset/logo.svg" alt=""><!-- 쇼핑몰 로고  -->
+            </a>
+        </div>
+        <div></div> <!-- 헤더 중앙공백 -->
+        <button class="header__logoutBtn" onclick="location.href='../sign/signin.html'">로그아웃</button>
+        <!-- 관리자 로그아웃 버튼-->
+    </header>
+
+    <div class="admin_workspace"> <!-- 관리자 작업공간 -->
+        <nav><!-- 네비게이션 메뉴 사작-->
+            <ul class="nav_manu">
+                <li class="menu__item ">
+                    <a href="./admin.html">
+                        <p>대시보드</p>
+                    </a>
+                </li>
+                <li class="menu__item ">
+                    <a href="./user_management.html">
+                        <p>사용자 관리</p>
+                    </a>
+                </li>
+                <li class="menu__item ">
+                    <a href="./product_management.html">
+                        <p>상품 관리</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <h1>FAQ</h1>
+        </main>
+        <aside>
+            <!-- 관리자 정보표시 -->
+            <div class="admin-side">
+                <div class="admin-info">
+                    <img src="https://img.freepik.com/free-vector/illustration-customer-service-concept_53876-5883.jpg?ga=GA1.1.647368945.1737282865&semt=ais_hybrid"
+                        alt="Admin Profile Picture" />
+                    <h3>관리자 이름</h3>
+                    <p>Admin ID: admin001</p>
+                    <p id="log_time"></p>
+                </div>
+
+                <nav class="admin-menu">
+                    <ul>
+                        <li>
+                            <div class="admin-notice">
+                                <span> 관리자 공지사항</span>
+                                <div class="notice-list">
+                                    <!-- 항상 보이는 공지 -->
+                                    <p class="notice">🔔 시스템 점검 예정: 25-01-30</p>
+                                    <p class="notice">📌 신규 업데이트 완료 안내</p>
+
+                                    <!-- 숨겨진 공지 -->
+                                    <div class="hidden-notices">
+                                        <p class="notice">🔒 보안 패치 적용 완료</p>
+                                        <p class="notice">💡 사용자 만족도 조사 예정</p>
+                                        <p class="notice">✔ 서버 점검 완료: 25-01-22</p>
+                                    </div>
+                                </div>
+                                <!-- 더보기 버튼 -->
+                                <button class="toggle-button">더보기</button>
+                            </div>
+                        </li>
+                        <li class="setting">
+                            <img
+                                src="https://cdn-icons-png.freepik.com/256/10895/10895086.png?ga=GA1.1.647368945.1737282865&semt=ais_hybrid">
+                            <span>설정</span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>

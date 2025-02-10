@@ -1,0 +1,472 @@
+* {
+  margin: o;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+
+/* i {
+  margin-right: 10px;
+  width: 10px;
+} */
+
+/* ===================================================================== */
+
+body {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: 400;
+  background-color: #F7EED9;
+  color: #614c71;
+  overflow-x: hidden;
+  width: 90vw;
+  max-width: 1903px;
+}
+
+span {
+  text-align: left;
+}
+
+.contain {
+  text-align: left;
+  width: 100vw;
+}
+
+
+/* 버튼 스타일 =============================================*/
+button {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/* 빠른 배송 버튼 효과 */
+.button1 {
+  position: relative;
+  margin: 0;
+  padding: 17px 35px;
+  outline: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: white;
+  border: 3px solid #614c71;
+  border-radius: 10px;
+  font-weight: 400;
+  font-family: inherit;
+  z-index: 0;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.button1.active {
+  background-color: #b494c0; 
+}
+
+.button1 span {
+  color: #614C71;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.7px;
+  margin-left: 10px;
+}
+
+.button1.active span{
+  color: black; 
+}
+
+
+.button1:hover {
+  animation: rotate624 0.7s ease-in-out both;
+}
+
+.button1:hover span {
+  animation: storm1261 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+
+@keyframes rotate624 {
+  0% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+
+  25% {
+      transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+
+  50% {
+      transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+
+  75% {
+      transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+
+  100% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes storm1261 {
+  0% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+  }
+
+  25% {
+      transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+
+  50% {
+      transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+
+  75% {
+      transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+
+  100% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
+
+.btn-shine {
+  border: 1px solid;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-shine span {
+  z-index: 20;
+}
+
+.btn-shine:after {
+  background: #38ef7d;
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: 0.4;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 50px;
+  z-index: -10;
+}
+
+.btn-shine:hover:after {
+  left: 120%;
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.button2 {
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  width: 120px;
+  height: 50px;
+  border-radius: 10px;
+  border: 2px solid #614c71;
+  transition: all 0.2s ease;
+  font-size: 20px;
+  font-weight: bold;
+  align-content: left;
+  color: #606060;
+  text-shadow: 0 1px #fff;
+  margin-right: 15px;
+  background-color: white;
+}
+
+.button2:hover {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+}
+
+.button2:active {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+}
+
+.button2:focus {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+}
+
+.priceinput {
+    display: flex;
+}
+
+.alcolinput {
+  display: flex;
+}
+
+/* 가격 & 도수 input의 적용 버튼 */
+.button3{
+  background-color: #4c97e8;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  width: 55px;
+  height: 30px;
+  align-items: center;
+  margin-left: 35%;
+}
+
+
+/* ========================================================= */
+
+/* 상품 정렬 조건 (인기도순, 가격순 ~~)*/
+
+/* 상품 필터 영역 지정(빠른 배송, 맛 checkbox-list , 도수 & 가격 inptut을 포함) */
+.choice {
+  width: 90vw;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 30px;
+}
+
+/* 빠른 배송 */
+.SortCondition {
+  font-size: 14px;
+  padding: 8px 12px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  margin-left: 10px;
+}
+
+.SortCondition:hover {
+  border-color: #9F6496;
+}
+
+.SortCondition:focus {
+  border-color: #9F6496;
+}
+
+.selected-items-container {
+  display: flex;
+  margin-top: 20px;
+}
+
+.selected-items-container span {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+  font-size: 16px;
+  padding: 8px 15px;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+}
+
+.selected-items-container i {
+  cursor: pointer;
+  font-size: 16px;
+  color: red;
+  margin-left: 10px;
+}
+
+/* ========================================================= */
+
+/* 맛 필터 =================================================*/
+
+.filterdiv {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.filtercontainer {
+  margin-right: 10px;
+  position: relative;
+  display: inline-block;
+  margin-right: 80px;
+  
+}
+
+.checkbox-list {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 15px;
+  width: 210px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.checkbox-list label {
+  display: block;
+   font-size: 15px;
+}
+
+/* ========================================================= */
+
+/* 상품목록================================================== */
+
+.ad1{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+}
+
+/* 목록별로 분류할 때 클래스, 아이디로 나누어 필터링 함 */
+.list1, .list2, .list3, .list4, #list1,
+#list2{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  
+  justify-items: center; 
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.product-info {
+  flex: 0 1 22%; 
+  margin: 10px; 
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center; 
+  margin-bottom: 5vh;
+}
+
+/* 상품 이미지 =============================================*/
+.imgzoom {
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* 상품 목록의 이미지 =======================================*/
+.productimg {
+  width: 100%;
+  height: 100%; 
+  transition: transform 0.3s ease;
+}
+
+.imgzoom:hover .productimg {
+  transform: scale(1.3);
+  transition: transform 0.3s ease;
+}
+
+/* ========================================================= */
+
+/* 상품명, 결제해야 할 금액================================== */
+.font {
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+  margin-top: 15px; 
+}
+
+/* 할인 전 가격 */
+.orginprice {
+  font-size: 20px;
+  text-decoration: line-through solid;
+  color: rgb(147, 140, 140);
+  margin-top: 5px; 
+}
+
+/* 할인율 */
+.discount {
+  color: rgb(255, 125, 58);
+  letter-spacing: 0.8px;
+  font-weight: bold;
+  margin-top: 5px; /* 할인율과 상품명 사이에 간격 추가 */
+}
+
+/* 상품 배치 (상품 간 간격 조절) */
+.product {
+  justify-content: space-between;
+  margin: 5px;
+}
+
+/* 검색 결과 (개수) */
+.resultcontainer {
+padding: 10px;
+display: inline-block;
+/* grid-template-columns: repeat(10, 1fr); */
+border-bottom: 3px solid #614C71;
+margin-top: 30px;
+margin-bottom: 30px;
+width: 95vw;
+}
+
+/* ========================================================= */
+
+.regiondiv {
+  height: 85vh;
+  width: 90vw;
+  max-width: 1903px;
+  display: grid;
+  place-items: center;
+  margin-top: 100px;
+}
+
+#regionfilter {
+  position: absolute; 
+  z-index: 2;
+}
+
+/* 지도 */
+#korea_map {
+  fill: #ccc;
+  stroke: #fff;
+  stroke-width: 0.5px;
+  height: 80vh;
+  width: 90vw;
+  margin-left: -180px;
+  z-index: 1;
+}
+
+/* 지역을 클릭했을 때 보이는 상품 div */
+.mapProduct {  
+  background-color: white;
+  padding: 10px;
+  display: block;
+  border-radius: 20px;
+}
+
+/* 그 지역의 상품 이미지 */
+.regionimg {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+/* a링크 효과*/
+.more-products {
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
+.more-products::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #333;
+  transition: width 0.3s;
+}
+
+.more-products:hover::after {
+  width: 0;
+}
+
+/* 지도에서 지역별 호버시 색 다르게 표시  */
+:hover{
+  cursor: pointer;
+}
+

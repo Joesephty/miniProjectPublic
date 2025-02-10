@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/mypage.css">
+    <link rel="icon" href="../asset/icon.svg">
+    <link rel="icon" href="../asset/korealogo.svg">
+
+    <!-- <link rel="stylesheet" href="../CSS/index.css"> -->
+    <script src="https://kit.fontawesome.com/bc52c2057e.js" crossorigin="anonymous"></script>
+    <script src="../JS/mypage.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>mypage</title>
+
+</head>
+
+<body class="bgClr1">
+    <div class="container">
+        <!-- header 는 나중에 완성되면 알려드리겠습니다. ㅠㅠ -->
+        <header class="header">
+
+            <!-- logo -->
+            <div class="logo">
+                <a href="#">
+                    <h2>달보드레</h2>
+                </a>
+            </div>
+
+            <!-- nav -->
+            <div class="nav">
+                <ul>
+                    <!-- 지역별 -->
+                    <li class="horiList">
+                        <a href="./product/region.html" class="navlink">지역별</a>
+                    </li>
+                    <!-- 막걸리 -->
+                    <li class="horiList">
+                        <a href="./product/makgulli.html" class="navlink">막걸리</a>
+                    </li>
+                    <!--증류주  -->
+                    <li class="horiList">
+                        <a href="./product/liquor.html" class="navlink">증류주</a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <!-- search bar -->
+            <div class="srchBar">
+                <i class="fa-solid fa-magnifying-glass icon Clr6"></i>
+                <input placeholder="토끼소주" type="search" class="input">
+            </div>
+
+
+            <!-- signin  -->
+            <div class="signIn">
+                <a href="./cart/cart.html"><i class="fa-solid fa-bag-shopping Clr6"> <span>장바구니</span></i></a>
+                <a href="./sign/signin.html"><i class="fa-solid fa-user Clr6"><span>로그인</span></i></a>
+            </div>
+
+            <!-- narrow width nav -->
+            <div class="menuIcon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+        </header>
+
+
+        <!-- 본인 page에 맞게 grid 를 분할하여 작업해주세요.-->
+        <main class="main">
+
+
+            <div class="purchaseList"></div> <!-- 구매 목록 -->
+
+
+            <!-- 리뷰 작성 모달 -->
+            <div class="modal">
+                <span class="close_modal"><i class="fa-solid fa-xmark"></i></span>
+                <h2>리뷰 작성</h2>
+                <textarea class="review_text" placeholder="리뷰 입력"></textarea>
+                <button class="btn submit_review"><i class="fa-solid fa-pen">작성 완료</i></button>
+
+            </div>
+
+
+            <a href="../index.html"> <!-- 홈페이지로 이동하는 링크-->
+                <img src="../asset/logo.svg" alt=""><!-- 쇼핑몰 로고  -->
+            </a>
+    </div>
+    <div></div> <!-- 헤더 중앙공백 -->
+    <button class="header__logoutBtn">로그아웃</button> <!-- 관리자 로그아웃 버튼-->
+    </header>
+
+
+
+    </main>
+
+
+    <footer class="footer">
+
+        <!-- userofterm 이용약관 -->
+        <div class="userTerm Clr6">
+            <ul>
+                <li class="horiList"><a href="#" class="userTermTxt">이용약관</a></li>
+                <li class="horiList"><a href="#" class="userTermTxt">개인정보처리방침</a></li>
+                <li class="horiList"><a href="#" class="userTermTxt">고객의 소리</a></li>
+            </ul>
+        </div>
+
+        <div class="bizTel Clr6">
+            <h2><i class="fa-solid fa-phone-volume"> 고객센터</i></h2>
+            <a href="tel0326131696" class="Clr6">032-613-1696</a>
+            <p>평일 10:00 - 18:00</p>
+        </div>
+
+
+        <!-- bizinfo 사업자정보 -->
+        <div class="bizInfo">
+            <p class="infoTxt Clr6"><strong>대표</strong> : 김지수, 서인덕, 한믿음, 주형진, 박수빈, 윤시우</p>
+            <p class="infoTxt Clr6"><strong>주소</strong> : 경기도 부천시 부천로29번길 7 (심곡동)</p>
+            <p class="infoTxt Clr6"><strong>사업자등록번호</strong> : 000 - 00 - 000 &nbsp; &nbsp;<a
+                    href="./otherpage/bizcertify.html" class="bgClr6">사업자 확인</a></p>
+            <p class="infoTxt Clr6"><strong>통신판매 신고번호</strong> : 2025-경기부천-0000</p>
+        </div>
+
+        <!-- footer logo 사업자명 -->
+        <div class="bizName Clr6">
+            <h2>주식회사 달보드레</h2>
+            <img src="./asset/logo_font2.svg" alt="달보드레">
+        </div>
+    </footer>
+
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./CSS/index.css"> -->
+    <link rel="stylesheet" href="../CSS/user_management.css">
+    <script defer src="../JS/admin_user_management.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="icon" href="../asset/icon.svg">
+    <title>user_management</title>
+</head>
+
+<body>
+    <header>
+        <div class="header__logo">
+            <a href="../index.html"> <!-- 홈페이지로 이동하는 링크-->
+                <img src="../asset/logo.svg" alt=""><!-- 쇼핑몰 로고  -->
+            </a>
+        </div>
+        <div></div> <!-- 헤더 중앙공백 -->
+        <button class="header__logoutBtn" onclick="location.href='../sign/signin.html'">로그아웃</button>
+        <!-- 관리자 로그아웃 버튼-->
+    </header>
+    <div class="admin_workspace"> <!-- 관리자 작업공간 -->
+        <nav><!-- 네비게이션 메뉴 사작-->
+            <ul class="nav_manu">
+                <li class="menu__item ">
+                    <a href="./admin.html">
+                        <p>대시보드</p>
+                    </a>
+                </li>
+                <li class="menu__item ">
+                    <a href="./user_management.html">
+                        <p>사용자 관리</p>
+                    </a>
+                </li>
+                <li class="menu__item ">
+                    <a href="./admin_product_management.html">
+                        <p>상품 관리</p>
+                    </a>
+                </li>
+                <li class="menu__item ">
+                    <a href="./admin_order.html">
+                        <p>거래 내역</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <div class="main__workpage">
+                <div class="membership__changes">
+                    <h2>회원변동사항</h2>
+                    <table> <!-- 회원 변동사항 표 -->
+                        <thead>
+                            <tr>
+                                <th class="membership__management">
+                                    전체이용자
+                                </th>
+                                <th class="membership__management">
+                                    신규이용자
+                                </th>
+                                <th class="membership__management">
+                                    답변완료 Q&A
+                                </th>
+                                <th class="membership__management">
+                                    신규 Q&A
+                                </th>
+                                <th class="membership__management">
+                                    신규 리뷰
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class='membership__value'>
+                            <!-- 데이터가 JS에서 동적으로 추가 -->
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+                <div class="membership__table">
+                    <h2>사용자 목록</h2>
+
+                    <!-- 검색 및 필터 -->
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="이름 또는 이메일 검색">
+                        <button onclick="searchProduct()">검색</button>
+                    </div>
+
+                    <!-- 사용자 테이블 -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>이메일</th>
+                                <th>닉네임</th>
+                                <th>연락처</th>
+                                <th>가입일</th>
+                                <th>회원정보</th>
+                            </tr>
+                        </thead>
+                        <tbody id="userTable">
+                            <!-- 데이터가 JS에서 동적으로 추가됨 -->
+                        </tbody>
+                    </table>
+
+                    <!-- 페이지네이션 -->
+                    <div id="btns">
+                        <div id="pagination" class="manag_btn"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <aside>
+            <!-- 관리자 정보표시 -->
+            <div class="admin-side">
+                <div class="admin-info">
+                    <img src="https://img.freepik.com/free-vector/illustration-customer-service-concept_53876-5883.jpg?ga=GA1.1.647368945.1737282865&semt=ais_hybrid"
+                        alt="Admin Profile Picture" />
+                    <h3>관리자 이름</h3>
+                    <p>Admin ID: admin001</p>
+                    <p id="log_time"></p>
+                </div>
+
+                <nav class="admin-menu">
+                    <ul>
+                        <li>
+                            <div class="admin-notice">
+                                <span> 관리자 공지사항</span>
+                                <div class="notice-list">
+                                    <!-- 항상 보이는 공지 -->
+                                    <p class="notice">🔔 시스템 점검 예정: 25-01-30</p>
+                                    <p class="notice">📌 신규 업데이트 완료 안내</p>
+
+                                    <!-- 숨겨진 공지 -->
+                                    <div class="hidden-notices">
+                                        <p class="notice">🔒 보안 패치 적용 완료</p>
+                                        <p class="notice">💡 사용자 만족도 조사 예정</p>
+                                        <p class="notice">✔ 서버 점검 완료: 25-01-22</p>
+                                    </div>
+                                </div>
+                                <!-- 더보기 버튼 -->
+                                <button class="toggle-button">더보기</button>
+                            </div>
+                        </li>
+                        <li class="setting">
+                            <img
+                                src="https://cdn-icons-png.freepik.com/256/10895/10895086.png?ga=GA1.1.647368945.1737282865&semt=ais_hybrid">
+                            <span>설정</span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+    </div>
+</body>
+
+</html>

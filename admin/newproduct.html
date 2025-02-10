@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>달보드레 admin</title>
+
+    <script src="https://kit.fontawesome.com/bc52c2057e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="../CSS/newproduct.css">
+    <script defer src="../JS/newproduct.js"> </script>
+    <link rel="icon" href="../asset/icon.svg"> <!-- Browser Tab단의 icon link -->
+</head>
+
+<body class="bgClr1">
+    <div class="container">
+
+
+        <header>
+
+        </header>
+
+
+        <main>
+            <h1>상품정보 등록</h1>
+            <div>
+                <!-- <div id="image_container"></div> -->
+                <form name="productRegistraionForm" class="product__table">
+                    <div class="disnone">
+                        <label>제품 번호 :
+                            <input type="number" name="prdctNo">
+                        </label>
+                    </div>
+
+                    <div class="category">
+                        제품 분류 :
+                        <div class="radio">
+                            <label> 막걸리
+                                <input type="radio" name="prdctCategory" value="막걸리" checked>
+                            </label>
+                            <label> 소주
+                                <input type="radio" name="prdctCategory" value="소주">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="lead">
+                        <div>
+                            <label>제품 이름 :
+                                <input type="text" name="prdctName" required>
+                            </label>
+                        </div>
+
+                        <div>
+                            <label>도수 :
+                                <input type="text" name="prdctalcohol" required>
+                            </label>
+                        </div>
+
+                        <div>
+                            <label> 용량 :
+                                <input type="text" name="prdctVolume" required>
+                            </label>
+                        </div>
+
+                        <div>
+                            <label> 제조지역 :
+                                <input type="text" name="prdctregion" required>
+                            </label>
+                        </div>
+                        <div>
+                            <label>제조사 :
+                                <input type="text" name="prdctCompany" required>
+                            </label>
+                        </div>
+
+                        <div>
+                            <label>가격 :
+                                <input type="text" name="prdctPrice" required>
+                            </label>
+                        </div>
+                        <div>
+                            <label>단맛 :
+                                <input type="text" name="sweetness" required>
+                            </label>
+                        </div>
+                        <div>
+                            <label>신맛 :
+                                <input type="text" name="sourness" required>
+                            </label>
+                        </div>
+                        <div>
+                            <label>탄산 :
+                                <input type="text" name="fizziness" required>
+                            </label>
+                        </div>
+                        <div>
+                            <label>주재료 :
+                                <input type="text" name="material" required>
+                            </label>
+                        </div>
+                        <div>
+                            <label>빠른 배달 :
+                                <input type="text" name="delivery" required>
+                            </label>
+                        </div>
+
+                        <div>
+                            <label>재고 :
+                                <input type="text" name="prdctInventory">
+                            </label>
+                        </div>
+                        <div>
+                            <label>한줄 설명 :
+                                <input type="text" name="prdctShortDesc" required>
+                            </label>
+                        </div>
+
+                        <div class="img">
+                            <label>이미지경로 :
+                                <input type="text" name="prdctImg" required>
+                                <!-- <input type="file" name="prdctImg" id="image" accept="image/*" onchange="setThumbnail(event);" required> -->
+                            </label>
+                        </div>
+
+                        <div>
+                            <label>이미지URL :
+                                <input type="text" name="prdctImgUrl" required>
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" name="submitBtn">전송</button>
+                </form>
+            </div>
+        </main>
+
+
+    </div>
+</body>
+
+</html>
