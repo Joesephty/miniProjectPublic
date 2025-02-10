@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD:database/database.json
   "users": [
     {
       "email": "zzznyyy@naver.com",
@@ -12,29 +11,6 @@
     }
   ],
   "promiseOrder": [
-=======
-  "reviews": [
-    {
-      "productName": "막걸리",
-      "review": "이 막걸리 너무 맛있어요!",
-      "date": "2025-01-30T12:00:00.000Z",
-      "id": "2e68"
-    },
-    {
-      "id": "9c3f",
-      "productName": "막걸리",
-      "review": "맛있다",
-      "date": "2025-02-03T08:54:06.590Z"
-    },
-    {
-      "id": "0e04",
-      "productName": "토끼소주",
-      "review": "ㅇㅇㅇㅇ",
-      "date": "2025-02-07T07:42:22.144Z"
-    }
-  ],
-  "clientData": [
->>>>>>> jhj:database/db.json
     {
       "orderUserName": "김지수",
       "phone": "01092837568",
