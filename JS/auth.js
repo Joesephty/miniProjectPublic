@@ -51,7 +51,6 @@ function headerChange() {
         if (pageInfo !== 'index.html') {
 
             auth.innerHTML = `
-            <a href="../sign/signin_rev1.html" id="signInBtn">
                 <i class="fa-solid fa-user Clr6">
                     <span>로그인</span>
                 </i>
@@ -59,7 +58,7 @@ function headerChange() {
             `
         } else {
             auth.innerHTML = `
-            <a href="./sign/signin_rev1.html" id="signInBtn">
+            <a href="./sign/signin.html" id="signInBtn">
                 <i class="fa-solid fa-user Clr6">
                     <span>로그인</span>
                 </i>

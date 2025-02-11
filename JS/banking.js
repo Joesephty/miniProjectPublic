@@ -1,3 +1,5 @@
+'use strict';
+
 const userOrderInfo = JSON.parse(sessionStorage.getItem('orderInputData')),
     orderName = userOrderInfo['orderUserName'],
     phone = userOrderInfo['phone'],

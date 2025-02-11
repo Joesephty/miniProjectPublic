@@ -135,6 +135,24 @@ main>div {
     gap: 1.25em;
     /* 20px / 16 */
     align-items: center;
+    
+}
+
+.productImg{
+    align-items: center;
+    justify-items: center;
+}
+
+
+.productImg img{
+
+    width: 50%;
+}
+
+.productInfo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
 }
 
 .button-top {

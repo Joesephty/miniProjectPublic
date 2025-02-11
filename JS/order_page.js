@@ -114,17 +114,20 @@ function getnow() {
 function getProductPrice() {
 
     totalPrice.innerHTML =
-        `<div>
+        `<div class ="productImg">
             <img src="${productImg}" alt="${productName}">
         </div>
-        <div>제품명 : </div>
-        <div>${productName}</div>
-        <div>가격 :</div>
-        <div> ${productPrice}</div> 
-        <div>수량 : </div>
-        <div>${quantity}</div>
-        <div>총액 : </div>
-        <div>${Number(productPrice) * Number(quantity)}</div>`  // 페이지에 주문 내역 삽입
+        <div class ="productInfo Clr6">
+            <div>제품명 : </div>
+            <div>${productName}</div>
+            <div>가격 :</div>
+            <div> ${productPrice}</div> 
+            <div>수량 : </div>
+            <div>${quantity}</div>
+            <div>총액 : </div>
+            <div>${Number(productPrice) * Number(quantity)}</div>
+        </div>    
+        `  // 페이지에 주문 내역 삽입
 }
 
 
